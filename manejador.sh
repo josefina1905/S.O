@@ -29,14 +29,8 @@ echo ""
 echo "intentelo de nuevo------------------------------------------------------------------------------------------------------------------------------------"
 }
 done
-echo "seleccione el tipo de usuario"
-echo "1-tutor"
-echo "2-administrador"
-read tipe
-case tipe in
-1) adduser "$user" tutores;;
-2) adduser "$user" administradores;;
-*) echo "opcion no contemplada"
+adduser "$user" tutores;;
+
 done
 ;;
 2)
