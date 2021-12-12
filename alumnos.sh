@@ -1,36 +1,30 @@
-NUEVOOOO
-
-
-
-
-ls /grupos | grep $grupo
 
 echo "Bienvenido, seleccione una opcion"
 
-echo "1-Registrarse"
-echo "2-Opciones"
-read opc
-case $opc in 
-	1) 
-	echo "1-Alumnos"
-	echo "2-Docentes"
-	read opc1
-	;;
-
-	2)
-	echo "1-Administrador"
-	echo "2-Tutor"
-	read opc2
-	;;
-
-	*)
-
-	echo "Opcion incorrecta, intente de nuevo"
-	read opc3
-	;;
-
-esac 
-
+##/echo "1-Registrarse"
+#echo "2-Opciones"
+#read opc
+#case $opc in 
+#	1) 
+#	echo "1-Alumnos"
+#	echo "2-Docentes"
+#	read opc1
+#	;;
+#
+#	2)
+#	echo "1-Administrador"
+#	echo "2-Tutor"
+#	read opc2
+#	;;
+#
+#	*)
+#
+#	echo "Opcion incorrecta, intente de nuevo"
+#	read opc3
+#	;;
+#
+#esac 
+#
 if [ "$opc1" == "1" ]; then 
 	echo "Ingrese su Ci"
 	read Ci
@@ -42,7 +36,7 @@ if [ "$opc1" == "1" ]; then
 	read telefono 
 	echo "Ingrese el grupo al que corresponda el alumno"
 	read grupo	
-	echo "$Ci - $nombre - $apellido - $telefono - $grupo" 
+	echo "$Ci - $nombre - $apellido - $telefono - $grupo" | 
 fi
 
 
@@ -66,8 +60,7 @@ if
 	echo "2-Bajas Alumnos"
 	echo "3-Modificar Alumnos"
 	echo "4-Buscar Alumno"
-	echo "5-Asistencia Alumno"
-	echo "6-Crear Tutor"
+	echo "5-lista del dia"
 	read opc4
 
 fi
@@ -109,23 +102,19 @@ case $opc4 in
 	4)
 	echo "Ingrese la ci del alumno que quiere buscar"
 	read ci
-	cat = ci *poner donde se guarda*
-
+	grep -r "$ci" /grupos/ *.txt | sed -n 
+	#grep -l
+    #(The letter ell.) Write only the names of files containing selected
+    #lines to standard output. Pathnames are written once per file searched.
+    #If the standard input is searched, a pathname of (standard input) will
+    #be written, in the POSIX locale. In other locales, standard input may be
+    #replaced by something more appropriate in those locales.
+	#cat = ci *poner donde se guarda*;;
 
 	5)
-	echo "Lista de alumnos"
-	sort *donde se guardan*
+	echo "Lista de alumnos hoy:"
+	toch ;;
 
-	6)
-	echo echo "Ingrese la ci del Tutor"
-	read ci
-	echo "Ingrese el nombre del Tutor"
-	read nombre
-	echo "Ingrese el apellido del Tutor"
-	read apellido
-	echo "Ingrese el telefono del Tutor"
-	read telefono
-	
 esac 
 
 

@@ -13,7 +13,7 @@ case $x in
 1)
 echo "ingrese el nombre del nuevo usuario"
 read user
-useradd "$user"
+sudo useradd "$user"
 autenticador=0
 while [$autenticador==0]
 do
@@ -23,7 +23,7 @@ echo "ingrese nuvamente la contraseña"
 read contra1
 if ($contra = $contra1)
 then
-    passwd "$user"
+    sudo passwd "$user" "$contra"
     $autenticador=0
 
 
@@ -36,8 +36,8 @@ useradd "$user" tutores
 done
 ;;
 2)
-useradd -p "admin" "admin"
-passwd admin
+sudo useradd -p "admin" "admin"
+sudo passwd admin "admin"
 mkdir "grupos"
 mkdir "diario"
 cat > alumnos.txt
