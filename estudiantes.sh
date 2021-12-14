@@ -1,6 +1,8 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
 #camilo danielli
+rep=1
+while [$rep = 1]
 echo "bienvenido al sistema de gestion de estudiantes"
 echo "1- registrar asistencias"
 echo "2- buscar"
@@ -17,7 +19,9 @@ bash buscador.sh;;
 grupos.sh;;
 4)
 alumnos.sh;;
-x) exit;;
-X) exit;;
+x) $rep=0;;
+X) $rep=0;;
 *) echo "orden no encontrada";
+esac
 done
+exit
