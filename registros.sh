@@ -3,7 +3,7 @@
 r=1
 while (r=1)
 echo "bienvenido al sistema de registro de asistencias"
-date = (date '+%Y-%m-%d')
+hoy=`date '+%Y_%m_%d'`;
 echo "1-registrar asistencia"
 echo "2-visualizar lista del dia"
 echo "3-salir"
@@ -17,10 +17,10 @@ read ci
 echo "bienvenido $nombre, que tengas un buen dia"
 
 mv $date.txt /diario
-cat "$nombre - $ci" >> diario/$date.txt;;
+cat "$nombre - $ci" >> diario/"$hoy".txt;;
 2)
-cat diario/$date.txt;;
+touch diario/"$hoy".txt;;
 3) r=0;
-done
+esac
 done
 exit
