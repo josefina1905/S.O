@@ -15,6 +15,6 @@ echo "ingrese la CI"
 read CI
 cat docentes.txt | grep $CI;;
 3) r=1;
-done
+esac
 done
 exit
