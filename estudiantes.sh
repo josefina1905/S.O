@@ -8,7 +8,7 @@ echo "3- nuevo grupo"
 echo "4- gestionar alumnos"
 echo "x- salir"
 read x
-case x in
+case $x in
 1)
 bash registros.sh;;
 2)
@@ -19,5 +19,6 @@ grupos.sh;;
 alumnos.sh;;
 x) exit;;
 X) exit;;
-*) echo "orden no encontrada";
+*) echo "orden no encontrada";; 
+esac
 done
