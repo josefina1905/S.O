@@ -37,8 +37,8 @@ fi
 done
 ;;
 2)
-useradd -p "admin" "admin"
-passwd admin
+sudo useradd -p "admin" "admin"
+sudo passwd admin "admin"
 mkdir "grupos"
 mkdir "diario"
 cat > alumnos.txt
