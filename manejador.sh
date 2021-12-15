@@ -21,9 +21,10 @@ echo "ingrese contraseña"
 read contra
 echo "ingrese nuvamente la contraseña"
 read contra1
-if ($contra = $contra1)
+if ("$contra" = "$contra1")
 then
-    passwd "$user"
+ sudo useradd "$user" tutores
+    sudo passwd "$user" "$contra"
     $autenticador=0
 
 
@@ -32,7 +33,7 @@ echo "la contrasña no cocide"
 echo ""
 echo "intentelo de nuevo------------------------------------------------------------------------------------------------------------------------------------"
 fi
-useradd "$user" tutores
+
 done
 ;;
 2)
