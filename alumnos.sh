@@ -20,7 +20,7 @@ echo "Ingrese la Ci del alumno"
 	echo "Ingrese el nombre del grupo que pertenece"
 	read grupo
 	
-	echo "$Ci - $nombre - $apellido - $telefono" >>  /gupos/"$grupo".txt
+	echo "$Ci - $nombre - $apellido" >>  /gupos/"$grupo".txt
 	echo "$Ci - $nombre - $apellido - $telefono" >> alumnos.txt;;
 2)
 echo "Ingrese la Ci del alumno"
