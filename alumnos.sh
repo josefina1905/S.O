@@ -1,6 +1,6 @@
 rep=1
 while [ $rep = 1 ]
-echo "seleccione una de las siguientes opciones"
+echo "Bienvenido,seleccione una de las siguientes opciones"
 echo "1-nuevo alumno"
 echo "2-editar alumno"
 echo "3-buscar alumno"
@@ -41,3 +41,7 @@ esac
 do 
 done
 exit
+
+
+
+
